@@ -4,6 +4,7 @@
   "description": "Dockerfile to build the prerender container image",
   "main": "server.js",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "html-minifier": "^3.2.15",
     "pm2": "^2.10.3",
     "prerender": "5.4.5"
