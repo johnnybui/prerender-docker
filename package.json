@@ -10,11 +10,12 @@
     "prerender": "5.4.5"
   },
   "devDependencies": {
-    "eslint": "^5.12.1"
+    "eslint": "^5.12.1",
+    "nodemon": "^1.18.9"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "prod": "echo \"\\033[0;35mRunning with Chrome version: `cat /opt/chromeVersion`\\033[0m\" && pm2 start server.js --no-daemon --instances=1"
   },
   "license": "MIT"

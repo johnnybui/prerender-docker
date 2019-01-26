@@ -9,7 +9,7 @@ module.exports = {
 
     const reqUrl = url.parse(req.prerender.url);
     const baseUrl = `${reqUrl.protocol}//${reqUrl.hostname}/`;
-    const $ = cheerio.load(req.prerender.content);
+    const $ = cheerio.load(req.prerender.content, { decodeEntities: false });
     $('head').prepend('<base href="' + baseUrl + '" target="_blank">');
     req.prerender.content = $.html();
 
