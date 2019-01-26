@@ -6,7 +6,6 @@ const healthcheck = require('./plugins/healthcheck');
 const removePrefetchTags = require('./plugins/removePrefetchTags');
 const log = require('./plugins/log');
 const consoleDebugger = require('./plugins/consoleDebugger');
-const setBaseUrl = require('./plugins/setBaseUrl');
 
 const options = {
   pageDoneCheckInterval: process.env.PAGE_DONE_CHECK_INTERVAL || 500,
@@ -34,7 +33,7 @@ server.use(prerender.httpHeaders());
 if (process.env.DEBUG_PAGES) {
   server.use(consoleDebugger);
 }
-// server.use(setBaseUrl);
+// server.use(require('./plugins/setBaseUrl'));
 server.use(stripHtml);
 
 server.start();
