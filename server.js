@@ -34,7 +34,7 @@ server.use(prerender.httpHeaders());
 if (process.env.DEBUG_PAGES) {
   server.use(consoleDebugger);
 }
-server.use(setBaseUrl);
+// server.use(setBaseUrl);
 server.use(stripHtml);
 
 server.start();
